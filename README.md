@@ -1,15 +1,14 @@
 # dl-final-2024-movie-classifier
-한림대학교 2024 딥러닝이론및응용 기말 프로젝트
-
-#  프로젝트명 (예: Poster2Genre)
-
-영화 포스터와 제목(Word2Vec 임베딩)을 활용한 **멀티라벨 장르 분류 모델**
+본 프로젝트는 **2024 딥러닝이론및응용 기말 Kaggle Competition**에서 수행한 과제입니다.  
+영화 포스터 이미지와 영화 제목의 Word2Vec 임베딩을 활용하여 **최대 3개의 영화 장르를 예측하는 멀티라벨 분류 모델**을 구현하였습니다.
 
 ---
 
 ##  개요 (Overview)
 - **대회명**: 2024 딥러닝이론및응용 기말 프로젝트 (Kaggle)
-- **목표**: 영화 포스터(.jpg)와 제목 벡터(.npy)를 입력으로 받아, **최대 3개 장르의 멀티라벨 예측**  
+- **목표**: 영화 포스터(.jpg)와 영화 제목 Word2Vec 임베딩(.npy)을 활용한 멀티라벨 장르 분류
+- **데이터셋 규모**: 약 20,000개 영화 포스터 및 제목 임베딩
+- **평가지표**: F1-Score (Micro/Mac
   :contentReference[oaicite:1]{index=1}
 
 ---
@@ -36,7 +35,7 @@
 
 ---
 
-## 🛠 사용 도구 (Tools & Technologies)
+## 사용 도구 (Tools & Technologies)
 
 ### 언어 및 프레임워크
 - **Python 3.11
@@ -79,14 +78,18 @@
   - Precision-Recall 커브 또는 ROC 커브
 
 ---
+## 📂 디렉토리 구조
+- 2024_딥러닝이론및응용_보고서.docx # 프로젝트 보고서
+- 20217137_강슬기.ipynb # 학습 및 실험 코드 (Jupyter Notebook)
+- best_loss_simple_fold8_model.pt # 저장된 학습 모델 (PyTorch)
+- README.md # 프로젝트 설명
+
+---
 
 ##  회고 및 배운 점 (Reflection & Learnings)
-- CNN과 텍스트 임베딩 조합의 장단점
-- 멀티라벨 분류 시 혼동 장르 존재 문제
-- 모델 성능 향상을 위한 데이터 증강의 중요성
-- 향후 개선 아이디어:
-  - Transformer 기반 이미지+텍스트融合 모델 실험
-  - 앙상블 또는 테스트 타임 augmentation 추가 도입
+- 단순한 모델이라도 데이터 활용 전략(K-Fold, 증강 등)을 통해 높은 성능 가능
+- Pretrained 모델이 금지된 환경에서 순수 구현 경험을 통해 네트워크 구조 설계 역량 강화
+- 학습률 스케줄러, Early Stopping, Regularization의 중요성 체감
 
 ---
 
