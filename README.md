@@ -78,6 +78,14 @@
   - Precision-Recall 커브 또는 ROC 커브
 
 ---
+
+## Leaderboard 결과
+<p align="center">
+  <img src="./images/DL_leaderboard_public.png" alt="Public Leaderboard" width="45%" />
+  <img src="./images/DL_leaderboard_private.png" alt="Private Leaderboard" width="45%" />
+</p>
+---
+
 ## 📂 디렉토리 구조
 - 2024_딥러닝이론및응용_보고서.docx # 프로젝트 보고서
 - 20217137_강슬기.ipynb # 학습 및 실험 코드 (Jupyter Notebook)
